@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { useAuth } from "./AuthContext";
-import { usePage } from "../layout/PageContext";
+import { useNavigate, Link } from "react-router-dom";
 
 /** A form that allows users to log into an existing account. */
 export default function Login() {
   const { login } = useAuth();
-  const { setPage } = usePage();
-
+  const navigate = useNavigate();
   const [error, setError] = useState(null);
 
   const tryLogin = async (formData) => {
