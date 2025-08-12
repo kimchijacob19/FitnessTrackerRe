@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import useQuery from "react-router-dom";
-import { uesAuth } from "../auth/AuthContext";
-import RoutineForm from "../RoutineForm";
+import useQuery from "../api/useQuery";
+import { useAuth } from "../auth/AuthContext";
+import RoutineForm from "./RoutineForm";
 
 export default function RoutinesPage() {
   const { token } = useAuth();
